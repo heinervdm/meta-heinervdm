@@ -15,3 +15,9 @@ do_configure_prepend () {
 	mv ${WORKDIR}/fbtft-238c3ad645a5a8214ec3190e621958d7d837ca21 ${S}/drivers/video/fbtft
 	mv ${WORKDIR}/spi-bcm2708.c ${S}/drivers/spi/
 }
+
+do_configure () {
+	cat ${WORKDIR}/fbtft.cfg >> ${S}/.config
+	yes '' | oe_runmake oldconfig
+	kernel_do_configure
+}
