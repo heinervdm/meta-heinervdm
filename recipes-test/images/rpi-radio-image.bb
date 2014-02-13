@@ -8,6 +8,7 @@ IMAGE_INSTALL += " \
 	qtserialport-e \
 	wpa-supplicant \
 	wireless-tools \
+	rpi-radio \
 	"
 
 IMAGE_FEATURES += "ssh-server-dropbear splash"
