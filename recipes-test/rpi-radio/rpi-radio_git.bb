@@ -26,6 +26,10 @@ export EXTRA_OECMAKE="-DQT_LIBRARY_DIR=${OE_QMAKE_LIBDIR_QT} \
                       -DQT_RCC_EXECUTABLE=${OE_QMAKE_RCC} \
                       -DQT_QMAKE_EXECUTABLE=${OE_QMAKE_QMAKE} \
                       -DQT_QTCORE_INCLUDE_DIR=${OE_QMAKE_INCDIR_QT}/QtCore \
+                      -DQT_DBUSXML2CPP_EXECUTABLE=/usr/bin/qdbusxml2cpp \
+                      -DQT_DBUSCPP2XML_EXECUTABLE=/usr/bin/qdbuscpp2xml \
+                      -DQT_MKSPECS_DIR=${QMAKESPEC}/../ \
+                      -DQT_LIBINFIX=${QT_LIBINFIX} \
                      "
 
 do_install() {
