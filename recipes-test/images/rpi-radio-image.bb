@@ -9,6 +9,8 @@ IMAGE_INSTALL += " \
 	wpa-supplicant \
 	wireless-tools \
 	rpi-radio \
+	nano \
+	fbset \
 	"
 
 IMAGE_FEATURES += "ssh-server-dropbear splash"
